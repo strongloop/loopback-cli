@@ -12,3 +12,5 @@
 *.swo
 node_modules
 *xunit.xml
+test/sandbox/
+test/fixtures/actual
