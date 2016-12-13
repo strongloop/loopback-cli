@@ -1,0 +1,31 @@
+{
+  "name": "loopback-cli",
+  "version": "0.1.0",
+  "description": "LoopBack CLI tool for creating projects, models and more.",
+  "license": "MIT",
+  "homepage": "http://loopback.io",
+  "keywords": [
+    "LoopBack",
+    "StrongLoop"
+  ],
+  "engines": {
+    "node": ">=4.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/strongloop/loopback-cli"
+  },
+  "scripts": {
+    "lint": "eslint --ignore-path=.gitignore .",
+    "posttest": "npm run lint"
+  },
+  "config": {
+    "ci": {
+      "debug": "*,-mocha:*,-eslint:*"
+    }
+  },
+  "devDependencies": {
+    "eslint": "^3.12.1",
+    "eslint-config-loopback": "^6.0.0"
+  }
+}
