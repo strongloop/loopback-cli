@@ -15,8 +15,12 @@
     "type": "git",
     "url": "https://github.com/strongloop/loopback-cli"
   },
+  "bin": {
+    "lb": "bin/loopback-cli.js"
+  },
   "scripts": {
     "lint": "eslint --ignore-path=.gitignore .",
+    "test": "mocha",
     "posttest": "npm run lint"
   },
   "config": {
@@ -24,8 +28,18 @@
       "debug": "*,-mocha:*,-eslint:*"
     }
   },
+  "dependencies": {
+    "debug": "^2.3.3",
+    "generator-loopback": "^2.1.0",
+    "nopt": "^4.0.1"
+  },
   "devDependencies": {
+    "chai": "^3.5.0",
+    "dirty-chai": "^1.2.2",
     "eslint": "^3.12.1",
-    "eslint-config-loopback": "^6.0.0"
+    "eslint-config-loopback": "^6.0.0",
+    "mkdirp": "^0.5.1",
+    "mocha": "^3.2.0",
+    "rimraf": "^2.5.4"
   }
 }
