@@ -37,7 +37,7 @@
     "chai": "^3.5.0",
     "dirty-chai": "^1.2.2",
     "eslint": "^3.12.1",
-    "eslint-config-loopback": "^6.0.0",
+    "eslint-config-loopback": "^7.0.1",
     "mkdirp": "^0.5.1",
     "mocha": "^3.2.0",
     "rimraf": "^2.5.4"
