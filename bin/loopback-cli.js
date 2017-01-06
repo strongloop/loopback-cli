@@ -87,7 +87,7 @@ try {
   process.exit(1);
 }
 
-//TODO(bajtos) implement support for "opts.help"
+// TODO(bajtos) implement support for "opts.help"
 
 debug('env.run %j %j', args, opts);
 env.run(args, opts);
