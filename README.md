@@ -5,16 +5,18 @@ This package supersedes the older `slc` tool.
 
 ## Installation
 
+To install the LoopBack CLI tool:
+
 ```
-$ npm install loopback-cli
+$ npm install -g loopback-cli
 ```
 
-## Usage
+## Use
 
 ### Getting started
 
- 1. Run `lb` to create a new LoopBack application
- 2. Run `node .` to start the scaffolded server
+ 1. Run `lb` to create a new LoopBack application.
+ 2. Run `node .` to start the scaffolded server.
 
 ### What's next
 
@@ -61,8 +63,8 @@ Example:
   This adds an entry to `Product.json` defining the model "Product".
 ```
 
-Refer to [Create a simple API](http://loopback.io/doc/en/lb3/Create-a-simple-API.html)
-in our documentation for more information.
+Refer to [Create a simple API](http://loopback.io/doc/en/lb3/Create-a-simple-API.html) 
+for more information.
 
 ## Contributing
 
