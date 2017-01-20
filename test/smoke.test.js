@@ -91,6 +91,15 @@ describe('smoke tests - lb', () => {
       });
   });
 
+  it('honours "lb app" flag --skip-next-steps', () => {
+    const prompts = {appName: 'test-app', appDir: '.'};
+    return invoke(['app', '--skip-install', '--skip-next-steps'], prompts)
+      .then(result => {
+        expect(result.stdout).to.not.match(/next steps/i);
+        expect(result.stderr).to.not.match(/next steps/i);
+      });
+  });
+
   it('creates a model via "lb model"', () => {
     const prompts = {
       modelName: 'test-model',
