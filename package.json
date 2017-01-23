@@ -29,6 +29,7 @@
     }
   },
   "dependencies": {
+    "camelcase-keys": "^4.0.0",
     "debug": "^2.3.3",
     "generator-loopback": "^2.2.0",
     "nopt": "^4.0.1"

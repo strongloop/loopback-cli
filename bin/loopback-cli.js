@@ -7,6 +7,7 @@
 'use strict';
 
 const assert = require('assert');
+const camelCaseKeys = require('camelcase-keys');
 const debug = require('debug')('loopback:cli');
 const nopt = require('nopt');
 const path = require('path');
@@ -67,7 +68,10 @@ const originalCommand = args.shift();
 const command = 'loopback:' + (originalCommand || 'app');
 args.unshift(command);
 debug('invoking generator', args);
-delete opts.argv;
+
+// `yo` is adding flags converted to CamelCase
+const options = camelCaseKeys(opts, {exclude: ['--', /^\w$/, 'argv']});
+Object.assign(options, opts);
 
 // Handle unknown command (generator)
 // This code overrides the error reported by yeoman:
@@ -87,7 +91,5 @@ try {
   process.exit(1);
 }
 
-// TODO(bajtos) implement support for "opts.help"
-
-debug('env.run %j %j', args, opts);
-env.run(args, opts);
+debug('env.run %j %j', args, options);
+env.run(args, options);
