@@ -7,6 +7,7 @@
 
 const expect = require('./helpers/expect');
 const fs = require('fs');
+const path = require('path');
 const invoke = require('./helpers/invoke');
 const sandbox = require('./helpers/sandbox');
 
@@ -243,6 +244,25 @@ describe('smoke tests - lb', () => {
         expect(routes)
           .to.have.property('test-middleware')
           .to.have.property('params').eql({key: 'value'});
+      });
+  });
+
+  it('generates models via "lb swagger"', () => {
+    const prompts = {
+      url: path.join(__dirname, './fixtures/pets.swagger.json'),
+      selectedModels: {pets: 2, Pet: 2, Error: 2},
+      dataSource: 'db',
+    };
+
+    return givenProjectInSandbox()
+      .then(() => invoke(['swagger'], prompts)
+      ).then(() => {
+        const pets = require(sandbox.resolve('common/models/pets.json'));
+        expect(pets.name).to.eql('pets');
+        expect(pets.base).to.eql('Model');
+        const pet = require(sandbox.resolve('common/models/pet.json'));
+        expect(pet.name).to.eql('Pet');
+        expect(pet.base).to.eql('PersistedModel');
       });
   });
 

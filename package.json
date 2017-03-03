@@ -1,6 +1,6 @@
 {
   "name": "loopback-cli",
-  "version": "1.0.1",
+  "version": "2.0.0-alpha.1",
   "description": "LoopBack CLI tool for creating projects, models and more.",
   "license": "MIT",
   "homepage": "http://loopback.io",
@@ -30,17 +30,17 @@
   },
   "dependencies": {
     "camelcase-keys": "^4.0.0",
-    "debug": "^2.3.3",
-    "generator-loopback": "^2.2.0",
+    "debug": "^2.6.1",
+    "generator-loopback": "^3.0.0",
     "nopt": "^4.0.1"
   },
   "devDependencies": {
     "chai": "^3.5.0",
     "dirty-chai": "^1.2.2",
-    "eslint": "^3.12.1",
-    "eslint-config-loopback": "^7.0.1",
+    "eslint": "^3.16.1",
+    "eslint-config-loopback": "^8.0.0",
     "mkdirp": "^0.5.1",
     "mocha": "^3.2.0",
-    "rimraf": "^2.5.4"
+    "rimraf": "^2.6.1"
   }
 }
