@@ -1,3 +1,9 @@
+2017-03-07, Version 2.0.0
+=========================
+
+ * Upgrade to generator-loopback@3.x (Raymond Feng)
+
+
 2017-01-23, Version 1.0.1
 =========================
 
