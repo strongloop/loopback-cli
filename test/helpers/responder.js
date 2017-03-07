@@ -38,6 +38,10 @@ const PROMPTS = [
   [/\? Enter the path of this endpoint:$/, selectDefault()],
   [/\? What is the name of this argument\?$/, selectDefault()],
   [/\? Path uri:$/, selectDefault()],
+
+  [/\? Enter the swagger spec url or file path:$/, enter('url')],
+  [/\? Select models to be generated:/, selectDefault()],
+  [/\? Select the data-source to attach models to:$/, selectDefault()],
 ];
 
 class Responder {
