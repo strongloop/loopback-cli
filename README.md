@@ -35,6 +35,7 @@ Available commands:
   lb property
   lb relation
   lb remote-method
+  lb soap  
   lb swagger
 ```
 
