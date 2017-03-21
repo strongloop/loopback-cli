@@ -23,6 +23,7 @@ const COMMANDS = [
   'property',
   'relation',
   'remote-method',
+  'soap',
   'swagger',
 ];
 
