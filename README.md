@@ -67,7 +67,7 @@ Example:
 Refer to [Create a simple API](http://loopback.io/doc/en/lb3/Create-a-simple-API.html) 
 for more information.
 
-Refer to [README](./soap/README_Soap.md) for more information on 'lb soap' command.
+Refer to [README_Soap](./soap/README_Soap.md) for more information on 'lb soap' command.
 ## Contributing
 
 IBM/StrongLoop is an active supporter of open source and welcomes contributions
