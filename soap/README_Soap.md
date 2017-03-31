@@ -71,12 +71,12 @@ select the service from a list of services.
 Once a 'service' is selected, it will discover and list bindings defined for the selected service. 
 Select a binding.
 
-![slc loopback:swagger](images/loopback-soap-binding.png)
+![lb soap](images/loopback-soap-binding.png)
 
 Once a 'binding' is selected, it will then discover and list SOAP operations defined in the selected binding.
 Select one or more SOAP operation/s.
 
-![slc loopback:swagger](images/loopback-soap-operations.png)
+![lb soap](images/loopback-soap-operations.png)
 
 Once one or more operation/s are selected, the project will generate remote models and REST API which can 
 invoke the external Web Service which is running at (http://www.webservicex.net/periodictable.asmx).
