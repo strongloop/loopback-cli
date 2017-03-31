@@ -13,7 +13,7 @@ existing services and data, and consume using JS, iOS & Android SDKs.
 Web services is a technology which lets applications to talk to each other independent 
 of platform and language. A web service is a software interface which describes a collection 
 of operations that can be invoked over the network through standardized XML messaging using 
-SOAP(Simple Object Access Protocol). WSDL(Web Services Description Language) is an 
+[SOAP](https://www.w3.org/TR/soap/)(Simple Object Access Protocol). [WSDL](https://www.w3.org/TR/wsdl20/)(Web Services Description Language) is an 
 XML formatted document which describes the Web Service endpoint, bindings, operations 
 and schema.
 
