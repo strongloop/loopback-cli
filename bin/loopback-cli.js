@@ -25,7 +25,9 @@ const opts = nopt({
 if (opts.version) {
   const ourVersion = require('../package.json').version;
   const generatorVersion = require('generator-loopback/package.json').version;
-  console.log('%s (generator-loopback@%s)', ourVersion, generatorVersion);
+  const workspaceVersion = require('generator-loopback').workspaceVersion;
+  console.log('%s (generator-loopback@%s loopback-workspace@%s)',
+    ourVersion, generatorVersion, workspaceVersion);
   return;
 }
 
