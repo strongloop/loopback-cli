@@ -1,3 +1,17 @@
+2017-04-06, Version 2.2.0
+=========================
+
+ * Include workspace version in --version log (Miroslav Bajtoš)
+
+ * Remove reference to swagger (rashmihunt)
+
+ * Add URL to SOAP and WSDL Spec (rashmihunt)
+
+ * Point to README_Soap from REAME (rashmihunt)
+
+ * Detail Readme for lb soap feature (rashmihunt)
+
+
 2017-03-27, Version 2.1.0
 =========================
 
