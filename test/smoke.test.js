@@ -13,6 +13,7 @@ const sandbox = require('./helpers/sandbox');
 
 const OUR_VERSION = require('../package.json').version;
 const GENERATOR_VERSION = require('generator-loopback/package.json').version;
+const WORKSPACE_VERSION = require('generator-loopback').workspaceVersion;
 
 // These tests invoke `loopback-cli` in a sub-process and perform
 // a very minimal verification of invoked command's results.
@@ -28,7 +29,8 @@ describe('smoke tests - lb', () => {
     return invoke(['--version']).then(result => {
       expect(result.exitCode).to.eql(0);
       expect(result.stdout).to.contain(OUR_VERSION)
-        .and.contain(GENERATOR_VERSION);
+        .and.contain(GENERATOR_VERSION)
+        .and.contain(WORKSPACE_VERSION);
     });
   });
 
