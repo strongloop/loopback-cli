@@ -51,9 +51,12 @@ select 'empty-server' for this demo purpose.
 
 ### Create a SOAP Web Services datasource
 
+```sh
+cd soap-demo
+```
+
 The next step is to create SOAP Web Services datasource. In this demo, we will create a SOAP datasource
-for an externally available Periodic Table Web Service: http://www.webservicex.net/periodictable.asmx?WSDL                                                       
-                                                         
+for an externally available Periodic Table Web Service: http://www.webservicex.net/periodictable.asmx?WSDL                                                                                                          
 
 ```sh
 lb datasource
@@ -78,7 +81,6 @@ Refer [SOAP data source properties](http://loopback.io/doc/en/lb3/SOAP-connector
 Now let's try to generate models and APIs from SOAP Web Services datasource.
 
 ```sh
-cd soap-demo
 lb soap
 ```
 This prompts list of SOAP Web Service datasources you have created for this app. For this demo it will just
@@ -115,7 +117,7 @@ The models and corresponding JS files are generated into the server/models folde
 
   - soap-periodictable-soap.json: model to host all APIs
   - soap-periodictable-soap.js: JS file containing all APIs which can invoke Web Service operations.
-  - get-atomic-number.js: GetAtomicNumber definition
+  - get-atomic-number.json: GetAtomicNumber definition
   - get-atomic-number.js: GetAtomicNumber extension
   - get-atomic-weight.json: GetAtomicWeight model definition
   - get-atomic-weight.js: GetAtomicWeight model extension
