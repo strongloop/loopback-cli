@@ -25,10 +25,10 @@ In many Enterprises, Web Services are still important and the way to access thes
 Web Services is still via SOAP. SOAP is fairly heavy weight, and working with XML-based SOAP 
 payloads in Node.js is not easy.  It’s much easier to use JSON and to wrap or mediate a SOAP 
 service and expose it as a REST API. To support API design first approach, 'lb soap' feature
-supports generation of JSON models and REST APIs for WSDL/SOAP operations. These operations 
+supports generation of JSON models and REST APIs for SOAP Web Services operations. These operations 
 can invoke Web Service without user writing any client code.
 
-## Scaffolding a LoopBack application from WSDL
+## Scaffolding a LoopBack application from SOAP Web Services datasource
 
 Before we start, please make sure you have loopback-cli installed:
 
@@ -49,22 +49,47 @@ select 'empty-server' for this demo purpose.
 
 ![lb soap](images/loopback-app.png)
 
-### Generate APIs from WSDL
-
-Now let's try to generate APIs from WSDL document. Note: There is an enhancement planned to generate 
-APIs given SOAP Web Service data source.
+### Create a SOAP Web Services datasource
 
 ```sh
 cd soap-demo
+```
+
+The next step is to create SOAP Web Services datasource. In this demo, we will create a SOAP datasource
+for an externally available Periodic Table Web Service: http://www.webservicex.net/periodictable.asmx?WSDL                                                                                                          
+
+```sh
+lb datasource
+```
+Here are the steps to create SOAP Web Services datasource for Periodic Table Web Service.
+
+- Enter the data-source name, e.g 'periodicSoapDS'
+- Scroll through and select 'Soap Webservices(supported by StrongLoop)' from the list of connectors.
+- Enter http://www.webservicex.net/periodictable.asmx for 'URL to the SOAP web service endpoint' prompt.
+- Enter http://www.webservicex.net/periodictable.asmx?WSDL for 'HTTP URL or local fie system path to WSDL file' prompt.
+- Enter 'Y' to Expose operations as REST APIs.
+- Leave blank to 'Maps WSDL binding operations to node.js methods'
+- Select 'Y' to 'Install 'loopback-connector-soap' prompt. 'lb soap' feature will not work if loopback-connector-soap
+  is not installed.
+
+Refer [SOAP data source properties](http://loopback.io/doc/en/lb3/SOAP-connector.html) for detail information on SOAP datasource properties.
+
+![lb soap](images/loopback-datasource.png)
+
+### Generate APIs from SOAP Web Services datasource
+
+Now let's try to generate models and APIs from SOAP Web Services datasource.
+
+```sh
 lb soap
 ```
-When prompted, provide an url or local file path to the WSDL. In this demo, we will use WSDL from an 
-externally available Web Service:
+This prompts list of SOAP Web Service datasources you have created for this app. For this demo it will just
+show 'periodicSoapDS' since we created only this datasource so far. Select the datasource from the list.
 
-http://www.webservicex.net/periodictable.asmx?WSDL
+![lb soap:](images/loopback-datasource-select.png)
 
-The generator loads the WSDL and discovers services defined in the WSDL. It then prompts you to 
-select the service from a list of services.
+The generator then discovers list of services defined in the WSDL for the selected datasource. 
+Select the service from a list of services.
 
 ![lb soap:](images/loopback-soap-service.png)
 
@@ -92,18 +117,11 @@ The models and corresponding JS files are generated into the server/models folde
 
   - soap-periodictable-soap.json: model to host all APIs
   - soap-periodictable-soap.js: JS file containing all APIs which can invoke Web Service operations.
-  - get-atomic-number.js: GetAtomicNumber definition
+  - get-atomic-number.json: GetAtomicNumber definition
   - get-atomic-number.js: GetAtomicNumber extension
   - get-atomic-weight.json: GetAtomicWeight model definition
   - get-atomic-weight.js: GetAtomicWeight model extension
   - etc
-
-Install 'strong-soap' node module for this soap-demo app. This is a workaround until enhancement to use 
-the SOAP datasource instead of WSDL is supported.
-
-```
-npm install strong-soap --save
-```
 
 ### Run the application
 
@@ -136,7 +154,7 @@ back to the API explorer.
 ## Summary
 
 With the 'lb soap' command, we now have the complete round trip: 
-- Start with a SOAP WSDL document.
+- Start with a SOAP Web Service datasource.
 - Generate corresponding models and APIs to invoke SOAP operations.
 - Play with the live APIs served by LoopBack using the explorer.
 - Invoke the Web Service through your REST API.
