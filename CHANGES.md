@@ -1,3 +1,11 @@
+2017-04-17, Version 2.2.1
+=========================
+
+ * Fix README review comments (rashmihunt)
+
+ * README change for WSDL to datasource (rashmihunt)
+
+
 2017-04-06, Version 2.2.0
 =========================
 
