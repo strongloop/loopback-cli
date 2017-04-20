@@ -1,4 +1,10 @@
-2017-04-17, Version 2.2.1
+2017-04-20, Version 2.3.0
+=========================
+
+ * bluemix command (Hage Yaapa)
+
+
+2017-04-16, Version 2.2.1
 =========================
 
  * Fix README review comments (rashmihunt)
