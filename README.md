@@ -28,6 +28,7 @@ Available commands:
   lb acl
   lb app
   lb boot-script
+  lb bluemix
   lb datasource
   lb export-api-def
   lb middleware

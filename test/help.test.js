@@ -15,6 +15,7 @@ const sandbox = require('./helpers/sandbox');
 const COMMANDS = [
   '',
   'acl',
+  'bluemix',
   'boot-script',
   'datasource',
   'export-api-def',

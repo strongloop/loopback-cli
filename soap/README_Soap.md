@@ -63,7 +63,7 @@ lb datasource
 ```
 Here are the steps to create SOAP Web Services datasource for Periodic Table Web Service.
 
-- Enter the data-source name, e.g 'periodicSoapDS'
+- Enter the datasource name, e.g 'periodicSoapDS'
 - Scroll through and select 'Soap Webservices(supported by StrongLoop)' from the list of connectors.
 - Enter http://www.webservicex.net/periodictable.asmx for 'URL to the SOAP web service endpoint' prompt.
 - Enter http://www.webservicex.net/periodictable.asmx?WSDL for 'HTTP URL or local fie system path to WSDL file' prompt.

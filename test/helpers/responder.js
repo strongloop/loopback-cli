@@ -19,7 +19,7 @@ const PROMPTS = [
   [/\? Custom plural form [^:]*:$/, enter('modelPlural')],
   [/\? .*property name:$/i, enter('propertyName')],
   [/\? default value[^:]*:$/i, enter('defaultValue')],
-  [/\? Enter the data-source name:$/, enter('dataSourceName')],
+  [/\? Enter the datasource name:$/, enter('dataSourceName')],
   [/\? Enter the script name[^:]*:$/, enter('scriptName')],
   [/\? Enter the remote method name:$/, enter('methodName')],
   [/\? Description for method:$/, enter('methodDescription')],
@@ -41,7 +41,7 @@ const PROMPTS = [
 
   [/\? Enter the swagger spec url or file path:$/, enter('url')],
   [/\? Select models to be generated:/, selectDefault()],
-  [/\? Select the data-source to attach models to:$/, selectDefault()],
+  [/\? Select the datasource to attach models to:$/, selectDefault()],
 ];
 
 class Responder {
