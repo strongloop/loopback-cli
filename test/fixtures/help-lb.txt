@@ -41,6 +41,7 @@ Available commands:
   lb export-api-def
   lb middleware
   lb model
+  lb oracle
   lb property
   lb relation
   lb remote-method

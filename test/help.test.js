@@ -21,6 +21,7 @@ const COMMANDS = [
   'export-api-def',
   'middleware',
   'model',
+  'oracle',
   'property',
   'relation',
   'remote-method',
