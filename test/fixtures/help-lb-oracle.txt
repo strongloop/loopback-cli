@@ -1,0 +1,20 @@
+Usage:
+  lb oracle [options]
+
+Options:
+  -h,   --help          # Print the generator's options and usage
+        --skip-cache    # Do not remember prompt answers             Default: false
+        --skip-install  # Do not automatically install dependencies  Default: false
+        --connector     # Install loopback-connector-oracle module
+        --driver        # Install oracledb module
+        --verbose       # Print verbose information
+
+Description:
+  Utility to help install LoopBack Oracle connector.
+
+Example:
+
+  lb oracle [--connector] [--driver] [--verbose]
+
+Without options, the command will try to detect the installation of Oracle Instant Client and check if `loopback-connector-oracle` can be loaded.
+
