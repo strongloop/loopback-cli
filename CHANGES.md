@@ -1,3 +1,11 @@
+2017-04-28, Version 2.4.0
+=========================
+
+ * Upgrade generator-loopback to 3.5.0 (Raymond Feng)
+
+ * Add `lb:oracle` command (Raymond Feng)
+
+
 2017-04-20, Version 2.3.0
 =========================
 
