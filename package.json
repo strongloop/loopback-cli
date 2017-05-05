@@ -31,7 +31,7 @@
   "dependencies": {
     "camelcase-keys": "^4.0.0",
     "debug": "^2.6.1",
-    "generator-loopback": "^3.5.0",
+    "generator-loopback": "^3.6.0",
     "nopt": "^4.0.1"
   },
   "devDependencies": {
