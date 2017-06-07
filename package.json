@@ -32,7 +32,7 @@
     "camelcase-keys": "^4.0.0",
     "debug": "^2.6.1",
     "generator-loopback": "^3.6.0",
-    "nopt": "^4.0.1"
+    "minimist": "^1.2.0"
   },
   "devDependencies": {
     "chai": "^3.5.0",
