@@ -1,3 +1,9 @@
+2017-06-08, Version 2.5.1
+=========================
+
+ * Switch from nopts to minimist for args parsing (Miroslav Bajtoš)
+
+
 2017-05-06, Version 2.5.0
 =========================
 
