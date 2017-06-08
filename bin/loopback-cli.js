@@ -9,17 +9,15 @@
 const assert = require('assert');
 const camelCaseKeys = require('camelcase-keys');
 const debug = require('debug')('loopback:cli');
-const nopt = require('nopt');
+const minimist = require('minimist');
 const path = require('path');
 
-const opts = nopt({
-  help: Boolean,
-  version: Boolean,
-  commands: Boolean,
-}, {
-  h: '--help',
-  v: '--version',
-  l: '--commands',
+const opts = minimist(process.argv.slice(2), {
+  alias: {
+    help: 'h',
+    version: 'v',
+    commands: 'l',
+  },
 });
 
 if (opts.version) {
@@ -65,7 +63,7 @@ if (opts.commands) {
   return;
 }
 
-const args = opts.argv.remain;
+const args = opts._;
 const originalCommand = args.shift();
 const command = 'loopback:' + (originalCommand || 'app');
 args.unshift(command);
