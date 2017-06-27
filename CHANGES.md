@@ -1,3 +1,11 @@
+2017-06-27, Version 2.6.0
+=========================
+
+ * Update generator-loopback to 3.9.0 (Hage Yaapa)
+
+ * Separate service provisioning (Hage Yaapa)
+
+
 2017-06-08, Version 2.5.1
 =========================
 
