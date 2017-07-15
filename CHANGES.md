@@ -1,4 +1,10 @@
-2017-06-27, Version 2.6.0
+2017-07-15, Version 3.0.0
+=========================
+
+ * deps: generator-loopback@4.0.0 (Hage Yaapa)
+
+
+2017-06-28, Version 2.6.0
 =========================
 
  * Update generator-loopback to 3.9.0 (Hage Yaapa)
