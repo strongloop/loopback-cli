@@ -47,4 +47,5 @@ Available commands:
   lb remote-method
   lb soap
   lb swagger
+  lb zosconnectee
 
