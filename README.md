@@ -15,7 +15,7 @@ $ npm install -g loopback-cli
 
 ### Getting started
 
- 1. Run `lb` to create a new LoopBack application.
+ 1. Run `lb [appName]` to create a new LoopBack application.
  2. Run `node .` to start the scaffolded server.
 
 ### What's next

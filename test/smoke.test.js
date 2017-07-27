@@ -61,14 +61,6 @@ describe('smoke tests - lb', () => {
     });
   });
 
-  it('reports custom error instead of "generator not installed"', () => {
-    return invoke(['unknown']).then(result => {
-      expect(result.exitCode).to.eql(1);
-      expect(result.stderr).to.contain('Unknown command')
-        .and.not.contain('generator');
-    });
-  });
-
   it('creates a new loopback project via "lb"', () => {
     const prompts = {appName: 'test-app', appDir: '.'};
     return invoke(['--skip-install'], prompts)
@@ -91,6 +83,15 @@ describe('smoke tests - lb', () => {
       .then(result => {
         const pkg = require(sandbox.resolve('package.json'));
         expect(pkg.name, 'package name').to.eql('test-app');
+      });
+  });
+
+  it('accepts a name for the loopback project', () => {
+    const prompts = {appName: 'my-app', appDir: '.'};
+    return invoke(['my-app', '--skip-install'], prompts)
+      .then(result => {
+        const pkg = require(sandbox.resolve('package.json'));
+        expect(pkg.name, 'package name').to.eql('my-app');
       });
   });
 

@@ -65,31 +65,24 @@ if (opts.commands) {
 
 const args = opts._;
 const originalCommand = args.shift();
-const command = 'loopback:' + (originalCommand || 'app');
-args.unshift(command);
+let command = 'loopback:' + (originalCommand || 'app');
+const supportedCommands = env.getGeneratorsMeta();
+
+if (!(command in supportedCommands)) {
+  command = 'loopback:app';
+  args.unshift(originalCommand);
+  args.unshift(command);
+} else {
+  args.unshift(command);
+}
+
 debug('invoking generator', args);
 
 // `yo` is adding flags converted to CamelCase
 const options = camelCaseKeys(opts, {exclude: ['--', /^\w$/, 'argv']});
 Object.assign(options, opts);
 
-// Handle unknown command (generator)
-// This code overrides the error reported by yeoman:
-//   You don’t seem to have a generator with the name “' + n + '” installed.
-//   But help is on the way:
-//   (etc.)
-try {
-  const generator = env.create(command, {args});
-  if (generator instanceof Error)
-    throw generator;
-} catch (err) {
-  debug('Cannot load generator %s: %s', command, err.stack);
-  console.error(
-    'Unknown command %j\n' +
-      'Run "%s --commands" to print the list of available commands.',
-    originalCommand, process.argv[1]);
-  process.exit(1);
-}
+const generator = env.create(command, {args});
 
 debug('env.run %j %j', args, options);
 env.run(args, options);
