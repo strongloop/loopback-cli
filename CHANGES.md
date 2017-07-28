@@ -1,3 +1,11 @@
+2017-07-28, Version 3.1.0
+=========================
+
+ * Support `lb [command | appName]` (Hage Yaapa)
+
+ * Add CODEOWNERS file (Diana Lau)
+
+
 2017-07-15, Version 3.0.0
 =========================
 
