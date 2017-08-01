@@ -35,9 +35,9 @@
     "minimist": "^1.2.0"
   },
   "devDependencies": {
-    "chai": "^3.5.0",
-    "dirty-chai": "^1.2.2",
-    "eslint": "^3.16.1",
+    "chai": "^4.1.0",
+    "dirty-chai": "^2.0.1",
+    "eslint": "^4.3.0",
     "eslint-config-loopback": "^8.0.0",
     "mkdirp": "^0.5.1",
     "mocha": "^3.2.0",
