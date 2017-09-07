@@ -1,3 +1,17 @@
+2017-09-07, Version 4.0.0
+=========================
+
+ * Increment generator-loopback to 5.0.0 (#54) (Rashmi Hunt)
+
+ * create pr template (Sakib Hasan)
+
+ * create issue template (Sakib Hasan)
+
+ * Update dev-dependencies (Miroslav Bajtoš)
+
+ * travis: drop Node.js 7.x, add 8.x (Miroslav Bajtoš)
+
+
 2017-07-28, Version 3.1.0
 =========================
 
