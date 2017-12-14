@@ -36,8 +36,9 @@ Available commands:
   lb property
   lb relation
   lb remote-method
-  lb soap  
+  lb soap
   lb swagger
+  lb zosconnectee
 ```
 
 Run `lb <command> --help` to learn more about each command. For example:

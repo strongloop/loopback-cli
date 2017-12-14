@@ -27,6 +27,7 @@ const COMMANDS = [
   'remote-method',
   'soap',
   'swagger',
+  'zosconnectee',
 ];
 
 const FIXTURES = path.resolve(__dirname, 'fixtures');
