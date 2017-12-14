@@ -1,3 +1,11 @@
+2017-12-14, Version 4.1.0
+=========================
+
+ * Update for zosconnectee command (Andrew Smithson)
+
+ * Update LICENSE (Diana Lau)
+
+
 2017-09-07, Version 4.0.0
 =========================
 
