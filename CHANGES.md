@@ -1,3 +1,11 @@
+2018-03-22, Version 4.2.0
+=========================
+
+ * update generator-loopback version (Diana Lau)
+
+ * update help-lb message (Diana Lau)
+
+
 2017-12-14, Version 4.1.0
 =========================
 
