@@ -36,10 +36,10 @@ process.env.SLC_COMMAND = 'loopback-cli';
 // therefore I am intentionally loading it only after we have
 // handled the "--version" case which becomes much faster as the result.
 const lbGenerator = require('generator-loopback');
-const yeoman = lbGenerator._yeoman; // generator-loopback should export _yeoman
-assert(yeoman, 'generator-loopback should export _yeoman');
+const yeomanEnv = lbGenerator._yeomanEnv;
+assert(yeomanEnv, 'generator-loopback should export _yeomanEnv');
 
-const env = yeoman();
+const env = yeomanEnv.createEnv();
 
 // Change the working directory to the generator-loopback module so that
 // yeoman can discover the generators
@@ -48,41 +48,39 @@ const cwd = process.cwd();
 debug('changing directory to %s', root);
 process.chdir(root);
 
-// lookup for every namespaces, within the environments.paths and lookups
-env.lookup();
-debug('changing directory back to %s', cwd);
-process.chdir(cwd); // Switch back
+env.lookup(function() {
+  debug('changing directory back to %s', cwd);
+  process.chdir(cwd); // Switch back
 
-// list generators
-if (opts.commands) {
-  console.log('Available commands: ');
-  var list = Object.keys(env.getGeneratorsMeta())
-    .filter(name => /^loopback:/.test(name))
-    .map(name => name.replace(/^loopback:/, '  lb '));
-  console.log(list.join('\n'));
-  return;
-}
+  // list generators
+  if (opts.commands) {
+    console.log('Available commands: ');
+    var list = Object.keys(env.getGeneratorsMeta())
+      .filter(name => /^loopback:/.test(name))
+      .map(name => name.replace(/^loopback:/, '  lb '));
+    console.log(list.join('\n'));
+    return;
+  }
 
-const args = opts._;
-const originalCommand = args.shift();
-let command = 'loopback:' + (originalCommand || 'app');
-const supportedCommands = env.getGeneratorsMeta();
+  const args = opts._;
+  const originalCommand = args.shift();
+  let command = 'loopback:' + (originalCommand || 'app');
+  const supportedCommands = env.getGeneratorsMeta();
 
-if (!(command in supportedCommands)) {
-  command = 'loopback:app';
-  args.unshift(originalCommand);
-  args.unshift(command);
-} else {
-  args.unshift(command);
-}
+  if (!(command in supportedCommands)) {
+    command = 'loopback:app';
+    args.unshift(originalCommand);
+    args.unshift(command);
+  } else {
+    args.unshift(command);
+  }
 
-debug('invoking generator', args);
+  debug('invoking generator', args);
 
-// `yo` is adding flags converted to CamelCase
-const options = camelCaseKeys(opts, {exclude: ['--', /^\w$/, 'argv']});
-Object.assign(options, opts);
+  // `yo` is adding flags converted to CamelCase
+  const options = camelCaseKeys(opts, {exclude: ['--', /^\w$/, 'argv']});
+  Object.assign(options, opts);
 
-const generator = env.create(command, {args});
-
-debug('env.run %j %j', args, options);
-env.run(args, options);
+  debug('env.run %j %j', args, options);
+  env.run(args, options);
+});
