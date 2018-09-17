@@ -54,7 +54,8 @@ describe('help', () => {
 
         const expected = fs.readFileSync(
           path.resolve(FIXTURES, helpFile),
-          'utf-8');
+          'utf-8'
+        );
 
         expect(actual).to.equal(expected);
       });

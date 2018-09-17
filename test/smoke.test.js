@@ -117,7 +117,8 @@ describe('smoke tests - lb', () => {
       })
       .then(() => {
         const modelJson = require(sandbox.resolve(
-          'common/models/test-model.json'));
+          'common/models/test-model.json'
+        ));
         expect(modelJson.name, 'model name in JSON').to.equal('test-model');
       });
   });
@@ -258,8 +259,7 @@ describe('smoke tests - lb', () => {
     };
 
     return givenProjectInSandbox()
-      .then(() => invoke(['swagger'], prompts)
-      ).then(() => {
+      .then(() => invoke(['swagger'], prompts)).then(() => {
         const pets = require(sandbox.resolve('common/models/pets.json'));
         expect(pets.name).to.eql('pets');
         expect(pets.base).to.eql('Model');
