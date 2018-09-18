@@ -56,4 +56,4 @@ function invokeCli(args, prompts) {
       resolve({stdout, stderr, exitCode: code});
     });
   });
-};
+}
