@@ -1,6 +1,6 @@
 {
   "name": "loopback-cli",
-  "version": "4.2.0",
+  "version": "4.2.1",
   "description": "LoopBack CLI tool for creating projects, models and more.",
   "license": "MIT",
   "homepage": "http://loopback.io",

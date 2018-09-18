@@ -1,3 +1,13 @@
+2018-09-18, Version 4.2.1
+=========================
+
+ * chore: upgrade dependencies (virkt25)
+
+ * Fix tests on printing help (shimks)
+
+ * Drop node 4 from CI (shimks)
+
+
 2018-03-22, Version 4.2.0
 =========================
 
