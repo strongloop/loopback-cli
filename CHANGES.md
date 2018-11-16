@@ -1,3 +1,11 @@
+2018-11-16, Version 5.0.0
+=========================
+
+ * feat: switch to yeoman-env (jannyHou)
+
+ * chore: add stalebot (Diana Lau)
+
+
 2018-09-18, Version 4.2.1
 =========================
 
