@@ -8,6 +8,7 @@
     "LoopBack",
     "StrongLoop"
   ],
+  "author": "IBM Corp.",
   "engines": {
     "node": ">=6"
   },
