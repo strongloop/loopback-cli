@@ -1,3 +1,13 @@
+2019-05-10, Version 5.0.1
+=========================
+
+ * chore: update copyright years (Diana Lau)
+
+ * chore: update LTS status (Diana Lau)
+
+ * LTS (jannyHou)
+
+
 2018-11-16, Version 5.0.0
 =========================
 
