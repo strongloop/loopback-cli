@@ -1,3 +1,9 @@
+2019-06-21, Version 5.0.3
+=========================
+
+ * fix: a workaround to fix the hanging cmd (jannyHou)
+
+
 2019-05-15, Version 5.0.2
 =========================
 
