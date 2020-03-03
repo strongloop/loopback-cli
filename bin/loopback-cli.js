@@ -8,9 +8,18 @@
 
 const assert = require('assert');
 const camelCaseKeys = require('camelcase-keys');
+const chalk = require('ansi-colors');
 const debug = require('debug')('loopback:cli');
 const minimist = require('minimist');
 const path = require('path');
+
+console.log(chalk.bold(chalk.red(`
+LoopBack 3 is in Maintenance LTS mode, only critical bugs and critical
+security fixes will be provided. The support ends in December 2020. We
+urge all LoopBack 3 users to migrate their applications to LoopBack 4
+as soon as possible. Refer to our Migration Guide for more information
+on how to upgrade: https://loopback.io/doc/en/lb4/migration-overview.html
+`)));
 
 const opts = minimist(process.argv.slice(2), {
   alias: {
