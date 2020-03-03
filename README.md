@@ -3,10 +3,14 @@
 LoopBack CLI tool for creating projects, models and more.
 This package supersedes the older `slc` tool.
 
-This module is in Active LTS mode, new features are no longer accepted.
-(See [Module Long Term Support Policy](#module-long-term-support-policy) below.)
+**⚠️ LoopBack 3 is in Maintenance LTS mode, only critical bugs and critical
+security fixes will be provided. (See
+[Module Long Term Support Policy](#module-long-term-support-policy) below.)**
 
-LoopBack 3 users looking for new features are encouraged to upgrade to LoopBack 4. Refer to [loopback-next#1849](https://github.com/strongloop/loopback-next/issues/1849) for more information on how to upgrade.
+We urge all LoopBack 3 users to migrate their applications to LoopBack 4 as
+soon as possible. Refer to our
+[Migration Guide](https://loopback.io/doc/en/lb4/migration-overview.html)
+for more information on how to upgrade.
 
 ## Installation
 
@@ -96,8 +100,8 @@ This module adopts the [Module Long Term Support (LTS)](http://github.com/CloudN
 
 | Version | Status          | Published | EOL      |
 | ------- | --------------- | --------- | -------- |
-| 5.x     | Active LTS      | Nov 2018  | Dec 2019 |
-| 4.x     | Maintenance LTS | Sep 2017  | Dec 2019 |
+| 5.x     | Maintenance LTS | Nov 2018  | Dec 2020 |
+| 4.x     | End-of-Life     | Sep 2017  | Dec 2019 |
 | 3.x     | End-of-Life     | Jul 2017  | Apr 2019 |
 
 Learn more about our LTS plan in the [docs](https://loopback.io/doc/en/contrib/Long-term-support.html).
