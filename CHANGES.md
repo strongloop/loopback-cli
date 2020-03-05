@@ -1,4 +1,16 @@
-2019-06-21, Version 5.0.3
+2020-03-05, Version 5.1.0
+=========================
+
+ * Print a warning about Maintenance LTS at startup (Miroslav Bajtoš)
+
+ * Update LTS status in README (Miroslav Bajtoš)
+
+ * chore: update copyright year (Diana Lau)
+
+ * chore: drop Node.js 6 support (Diana Lau)
+
+
+2019-06-20, Version 5.0.3
 =========================
 
  * fix: a workaround to fix the hanging cmd (jannyHou)
