@@ -1,3 +1,10 @@
+
+LoopBack 3 is in Maintenance LTS mode, only critical bugs and critical
+security fixes will be provided. The support ends in December 2020. We
+urge all LoopBack 3 users to migrate their applications to LoopBack 4
+as soon as possible. Refer to our Migration Guide for more information
+on how to upgrade: https://loopback.io/doc/en/lb4/migration-overview.html
+
 Usage:
   lb app [options] [<name>]
 

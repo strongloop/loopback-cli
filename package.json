@@ -30,6 +30,7 @@
     }
   },
   "dependencies": {
+    "ansi-colors": "^4.1.1",
     "camelcase-keys": "^4.2.0",
     "debug": "^4.0.1",
     "generator-loopback": "^6.0.0",
