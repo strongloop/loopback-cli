@@ -13,7 +13,7 @@ const debug = require('debug')('loopback:cli');
 const minimist = require('minimist');
 const path = require('path');
 
-console.log(chalk.bold(chalk.red(`
+console.error(chalk.bold(chalk.red(`
 LoopBack 3 is in Maintenance LTS mode, only critical bugs and critical
 security fixes will be provided. The support ends in December 2020. We
 urge all LoopBack 3 users to migrate their applications to LoopBack 4
