@@ -3,8 +3,9 @@
 LoopBack CLI tool for creating projects, models and more.
 This package supersedes the older `slc` tool.
 
-**⚠️ LoopBack 3 is in Maintenance LTS mode, only critical bugs and critical
-security fixes will be provided. (See
+**⚠️ LoopBack 3 has reached end of life. We are no longer accepting pull requests or providing 
+support for community users. The only exception is fixes for critical bugs and security 
+vulnerabilities provided as part of support for IBM API Connect customers. (See
 [Module Long Term Support Policy](#module-long-term-support-policy) below.)**
 
 We urge all LoopBack 3 users to migrate their applications to LoopBack 4 as
@@ -100,7 +101,7 @@ This module adopts the [Module Long Term Support (LTS)](http://github.com/CloudN
 
 | Version | Status          | Published | EOL      |
 | ------- | --------------- | --------- | -------- |
-| 5.x     | Maintenance LTS | Nov 2018  | Dec 2020 |
+| 5.x     | End-of-Life     | Nov 2018  | Dec 2020 |
 | 4.x     | End-of-Life     | Sep 2017  | Dec 2019 |
 | 3.x     | End-of-Life     | Jul 2017  | Apr 2019 |
 
