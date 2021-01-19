@@ -14,9 +14,12 @@ const minimist = require('minimist');
 const path = require('path');
 
 console.error(chalk.bold(chalk.red(`
-LoopBack 3 is in Maintenance LTS mode, only critical bugs and critical
-security fixes will be provided. The support ends in December 2020. We
-urge all LoopBack 3 users to migrate their applications to LoopBack 4
+LoopBack 3 has reached end of life. We are no longer accepting pull requests
+or providing support for community users. The only exception is fixes for
+critical bugs and security vulnerabilities provided as part of support for
+IBM API Connect customers.
+
+We urge all LoopBack 3 users to migrate their applications to LoopBack 4
 as soon as possible. Refer to our Migration Guide for more information
 on how to upgrade: https://loopback.io/doc/en/lb4/migration-overview.html
 `)));
