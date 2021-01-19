@@ -1,3 +1,13 @@
+2021-01-19, Version 5.2.0
+=========================
+
+ * Reword end-of-life warning printed by CLI (Miroslav Bajtoš)
+
+ * chore: update LTS status to End-of-Life (Rifa Achrinza)
+
+ * fix: warning about LoopBack 3 in stderr (HugoPoi)
+
+
 2020-03-05, Version 5.1.0
 =========================
 
